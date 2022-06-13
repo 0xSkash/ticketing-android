@@ -1,21 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@id/navigation_tasks">
+    app:startDestination="@id/navigation_home">
 
     <fragment
-        android:id="@+id/navigation_tasks"
-        android:name="de.skash.ticketing.feature.task.TasksFragment"
-        android:label="TasksFragment" />
-
-    <fragment
-        android:id="@+id/navigation_people"
-        android:name="de.skash.ticketing.feature.person.PeopleFragment"
-        android:label="PeopleFragment" />
+        android:id="@+id/navigation_home"
+        android:name="de.skash.ticketing.feature.home.HomeFragment"
+        android:label="HomeFragment"
+        tools:layout="@layout/fragment_home" />
 
     <fragment
         android:id="@+id/navigation_projects"
         android:name="de.skash.ticketing.feature.project.ProjectsFragment"
-        android:label="ProjectsFragment" />
+        android:label="ProjectsFragment"
+        tools:layout="@layout/fragment_projects" />
+
+    <fragment
+        android:id="@+id/navigation_issues"
+        android:name="de.skash.ticketing.feature.issue.IssuesFragment"
+        android:label="IssuesFragment"
+        tools:layout="@layout/fragment_issues" />
+
+    <fragment
+        android:id="@+id/navigation_dashboard"
+        android:name="de.skash.ticketing.feature.dashboard.DashboardFragment"
+        android:label="DashboardFragment"
+        tools:layout="@layout/fragment_dashboard" />
+
+    <fragment
+        android:id="@+id/navigation_notifications"
+        android:name="de.skash.ticketing.feature.notification.NotificationsFragment"
+        android:label="NotificationsFragment"
+        tools:layout="@layout/fragment_notifications" />
 </navigation>
